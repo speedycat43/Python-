@@ -1,4 +1,60 @@
-Any test written in single, double or triple quotes is a string
+Any text written in single, double or triple quotes is a string
+
 a = "string"
 print(a)
 print(len(a))
+
+ml = ''' I am creating a 
+multiline string with 
+all single quotes '''
+print(ml)
+print(len(ml))
+
+first_name = "urjashi"
+last_name = "bharadwaj"
+lang = "python"
+conc_string = "I am %s %s and I am learning %s" %(first_name, last_name, lang)
+print(conc_string)
+print(lang[-4])
+print(lang [2])  #prints same letter t
+#slicing
+print(lang[3:5]) #prints from 3 to 5 but does not include 5
+print(lang[-3:])
+print(lang[3:])
+#reversing a string
+greeting = "Hello World"  
+print(greeting[::-1])
+# skipping characters while slicing
+pto = lang[0:6:2]
+print(pto)
+
+
+''' STRING METHODS'''
+#capitalize()
+a = "meow"
+print(a.capitalize()) # first character becomes capital
+#count returns occurences of a substring in a string
+challenge = "thirty days of python"
+print(challenge.count("y"))
+#endswith() startswith()
+print(challenge.endswith("on")) #returns true
+print(challenge.endswith("si")) #returns false
+print(challenge.startswith("thirty")) #returns true
+#find() : returns first occurance of a character
+print(challenge.find("y"))
+#rfind() : returns index of the last occurance of a character
+print(challenge.rfind("y"))
+
+challenge = "thirty days of python "
+sub_string = "da"
+#index() returns the lowest index of a substring
+print(challenge.index(sub_string))
+#rindex() returns the highest index of a substring
+print(challenge.rindex(sub_string))
+
+#replace
+data = "apple tree"
+print(data.replace("apple" , "banana"))
+
+#split
+print(challenge.split())

@@ -1,0 +1,58 @@
+'''List is a collection which is ordered and modifiable
+Allows duplicate members
+can store different datatypes'''
+list = ["button", 259, True]
+
+empty_list = []
+fruits = ["banana", "apple", "mango" "orange"]
+print("Fruits:", fruits)
+print("No of fruits: ", len(fruits))
+print(fruits[1])
+print(fruits[-3])
+#both prints apple
+ffruits = ["banana", "orange","mango","lemon"]
+all_ffruits = ffruits[0:4]
+print(all_ffruits) #prints everything on the list
+orange_mango = ffruits[1:3]
+print(orange_mango)
+print(ffruits[-3:-1])
+#reversing the list
+reverse_fruits = ffruits[::-1]
+print(reverse_fruits)
+ffruits[0] = "avacado"
+ffruits[1] = "apple"
+print(ffruits)   #changing lists
+
+
+basket = ["banana", "orange","mango","lemon"]
+#append inserts an item at the end
+basket.append("apple")
+print(basket)
+#insert adds an item at a specified index
+basket.insert(2, "kiwi")
+print(basket)
+#remove we remove a specified item
+basket.remove("orange")
+# pop - removes items from specified index
+basket.pop(0)
+print(basket)
+
+
+#copying
+basket_copy = basket.copy()
+print(basket_copy)
+#joining
+num1 = [1,2,3,4]
+num2 = [5,6]
+num1.extend(num2)
+print(num1)
+#count
+ages = [11, 19, 24,13,24,24,26]
+print(ages.count(24))
+#index
+print(basket.index("orange"))
+#reverse
+reverse = fruits.reverse()
+print(reverse)
+#sort()
+print(ages.sort())

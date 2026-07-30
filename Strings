@@ -1,0 +1,4 @@
+Any test written in single, double or triple quotes is a string
+a = "string"
+print(a)
+print(len(a))

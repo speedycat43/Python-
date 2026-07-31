@@ -1,0 +1,21 @@
+'''Dictionary is unordered and modifiable (mutable) '''
+empty_dict = {}
+person = { 
+    "first_name":"Clara",
+    "last_name" : "Dow",
+    "age" : 24,
+    "country" :"Germany"}
+print(person["first_name"])
+print(person["age"]) 
+#accessing items
+print(person.get("first_name"))
+#modifying dictionary
+person["first_name"] = "Beyleaf"
+print(person)
+#deleting
+#pop() : removes a specified element ()
+#popitem() : removes last item
+person.pop("first_name")
+person.popitem()
+
+

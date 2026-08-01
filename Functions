@@ -1,0 +1,44 @@
+'''
+Function Returning a Value
+'''
+def add_two_numbers ():
+    num_one = 2
+    num_two = 3
+    total = num_one + num_two
+    return total
+print(add_two_numbers())
+
+'''
+Function without Parameters
+'''
+def add_two_numbers():
+    num_one = 3
+    num_two = 4
+    total = num_one + num_two
+    print(total)
+add_two_numbers()
+
+#Write a function called is_prime, which checks if a number is prime
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range (2, n):   #it will check all values of i and all devisors then when it is false it will return true
+        if n%i == 0:
+            return False
+    return True
+
+a = int(input("Enter number: "))
+result = is_prime(a)
+print(result)
+
+
+#Call your function factorial, it takes a whole number as a parameter and it return a factorial of the number
+def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        return n*factorial(n-1)
+
+b = int(input("Enter number to calculate factorial: "))
+fact = factorial(b)
+print(fact)

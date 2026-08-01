@@ -1,0 +1,52 @@
+#Write different functions which take lists. They should calculate_mean, calculate_median, calculate_mode, calculate_range, calculate_variance, calculate_std (standard deviation).
+def calculate_mean(lst):
+    return sum(lst)/len(lst)
+def calculate_median(lst):
+    lst = sorted(lst)
+    n = len(lst)
+    if n%2 == 1: #odd no of terms
+        return lst[n//2]
+    else : #for even no of terms
+        return (lst[n//2 - 1] + lst[n//2]) /2
+def calculate_mode(lst):
+    freq = {}
+    for i in lst:
+        if i in freq:
+            freq[i]+=1
+        else:
+            freq[i]= 1
+    max_count = max(freq.values())
+    for key in freq:
+        if freq[key] == max_count:
+            return key
+def calculate_range(lst):
+    return max(lst) - min(lst)
+def calculate_variance(lst):
+    mean = calculate_mean(lst)
+    total = 0
+    for i in lst:
+        total += (i-mean)**2
+    return total/len(lst)
+
+def calculate_std(lst):
+    variance = calculate_variance(lst)
+    return variance**0.5
+
+lst = []
+a = int(input("Enter first num: "))
+lst.append(a)
+b = int(input("Enter second num: "))
+lst.append(b)
+c = int(input("Enter third num: "))
+lst.append(c)
+d = int(input("Enter fourth num: "))
+lst.append(d)
+e = int(input("Enter fifth num: "))
+lst.append(e)
+print(lst)
+print("Mean:", calculate_mean(lst))
+print("Median:", calculate_median(lst))
+print("Mode:", calculate_mode(lst))
+print("Range:", calculate_range(lst))
+print("Variance:", calculate_variance(lst))
+print("Standard Deviation:", calculate_std(lst))

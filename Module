@@ -1,0 +1,23 @@
+import mymodule
+print (mymodule.generate_sum(5,6))
+from mymodule import generate_sum as total
+print(total(4,5))
+
+#Statistics module
+from statistics import*
+ages = [9,18,14,15,20,21]
+print(mean(ages))
+print(median(ages))
+print(mode(ages))
+
+from math import*
+print(pi)
+print(sqrt(6))
+print(pow(2,3))
+print(floor(9.81))
+print(ceil(9.81))
+from random import random, randint
+print(random())
+print(randint(5,20))
+
+
